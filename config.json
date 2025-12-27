@@ -1,0 +1,73 @@
+{
+    "app": {
+        "name": "Trade Alert PRO",
+        "version": "19.10"
+    },
+    "trading": {
+        "pairs": [
+            "BTCUSDT",
+            "ETHUSDT",
+            "BNBUSDT",
+            "SOLUSDT",
+            "XRPUSDT",
+            "ADAUSDT",
+            "DOGEUSDT",
+            "SHIBUSDT",
+            "DOTUSDT",
+            "MATICUSDT",
+            "LTCUSDT",
+            "TRXUSDT",
+            "AVAXUSDT",
+            "UNIUSDT",
+            "ATOMUSDT",
+            "LINKUSDT",
+            "ETCUSDT",
+            "XLMUSDT",
+            "ALGOUSDT",
+            "BCHUSDT",
+            "VETUSDT",
+            "FILUSDT",
+            "ICPUSDT",
+            "MANAUSDT",
+            "SANDUSDT",
+            "AXSUSDT",
+            "AAVEUSDT",
+            "EOSUSDT",
+            "XTZUSDT",
+            "THETAUSDT"
+        ],
+        "defaultTimeframe": "15m",
+        "strategyName": "IA Grok Copy Trade",
+        "updateIntervals": [
+            {
+                "value": "manual",
+                "label": "Manual",
+                "default": true
+            },
+            {
+                "value": "15",
+                "label": "15 min (Rápido)"
+            },
+            {
+                "value": "30",
+                "label": "30 min (Médio)"
+            },
+            {
+                "value": "40",
+                "label": "40 min (Lento)"
+            }
+        ]
+    },
+    "api": {
+        "binance": "https://api.binance.com/api/v3"
+    },
+    "ai": {
+        "enabled": true,
+        "provider": "local",
+        "apiKey": "",
+        "thresholds": {
+            "minConfidence": 50,
+            "highConfidence": 75
+        }
+    }
+}

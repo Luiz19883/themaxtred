@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MAX - Trade VIP Signals</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-image: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+        }
+
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(0, 242, 234, 0.5);
+            border-radius: 50%;
+            animation: float 10s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        .content-wrapper {
+            z-index: 10;
+            text-align: center;
+            position: relative;
+        }
+
+        .brand-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #00f2ea, #fff, #00f2ea);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .brand-subtitle {
+            font-size: 1.2rem;
+            color: #888;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 50px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ai-text {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .grok-logo {
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .grok-logo::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: #00f2ea;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00f2ea;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .enter-btn {
+            background: transparent;
+            border: 2px solid #00f2ea;
+            color: #00f2ea;
+            padding: 15px 50px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+        }
+
+        .enter-btn:hover {
+            background: #00f2ea;
+            color: #000;
+            box-shadow: 0 0 30px rgba(0, 242, 234, 0.6);
+        }
+
+        .loading-bar-container {
+            width: 200px;
+            height: 2px;
+            background: #333;
+            margin: 30px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loading-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            background: #00f2ea;
+            animation: loading 2s infinite ease-in-out;
+        }
+
+        @keyframes loading {
+            0% {
+                left: -50%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles" class="particles"></div>
+
+    <div class="content-wrapper">
+        <div class="brand-title">THE MAX</div>
+        <div class="brand-subtitle">Trade VIP Signals</div>
+
+        <div class="ai-badge">
+            <div class="ai-text">Powered by</div>
+            <div class="grok-logo">GROK AI</div>
+        </div>
+
+        <button class="enter-btn" onclick="enterSystem()">
+            Access Platform
+        </button>
+
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+
+        <p style="margin-top: 15px; font-size: 10px; color: #555; letter-spacing: 1px;">
+            HIGH FREQUENCY SYSTEM V19.10
+        </p>
+    </div>
+
+    <script>
+        // Particle generation
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.width = Math.random() * 3 + 'px';
+            p.style.height = p.style.width;
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.top = Math.random() * 100 + 'vh';
+            p.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            p.style.animationDelay = (Math.random() * 5) + 's';
+            particlesContainer.appendChild(p);
+        }
+
+        // Auto-login setup
+        localStorage.setItem("vip", "true");
+        localStorage.setItem("currentSession", JSON.stringify({
+            user: "vip_user",
+            role: "vip",
+            timestamp: Date.now()
+        }));
+
+        function enterSystem() {
+            const btn = document.querySelector('.enter-btn');
+            btn.innerHTML = 'INITIALIZING...';
+            btn.style.opacity = '0.7';
+
+            // Sound effect placeholder
+            // const audio = new Audio('assets/enter.mp3');
+            // audio.play().catch(e => {});
+
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 1s ease';
+                document.body.style.opacity = '0';
+                setTimeout(() => {
+                    window.location.href = 'vip.html';
+                }, 1000);
+            }, 800);
+        }
+    </script>
+</body>
+
+</html>

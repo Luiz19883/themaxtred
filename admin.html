@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE MAX - Admin</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/modern-vip.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="assets/logo-the-max-dex.jpg" alt="THE MAX DEX" class="brand-logo">
+            </div>
+            <nav class="nav-menu">
+                <div class="nav-item" onclick="window.location.href='vip.html'">
+                    <i data-lucide="arrow-left"></i> Back to Dashboard
+                </div>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="page-title">
+                    <h1>Administration</h1>
+                    <p>System Configuration & User Management</p>
+                </div>
+            </header>
+            <div class="view-section" style="display:block; padding: 20px;">
+                <div class="glass-panel">
+                    <div class="panel-header">
+                        <span class="panel-title">Admin Panel</span>
+                    </div>
+                    <div style="padding: 20px; text-align: center;">
+                        <i data-lucide="lock"
+                            style="width: 48px; height: 48px; margin-bottom: 20px; color: var(--accent);"></i>
+                        <h3>Restricted Access</h3>
+                        <p>You need administrator privileges to access this area.</p>
+                        <button class="btn-primary" style="margin-top: 20px;"
+                            onclick="window.location.href='vip.html'">Return to Dashboard</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
